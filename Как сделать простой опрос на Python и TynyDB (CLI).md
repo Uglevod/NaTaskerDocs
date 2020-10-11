@@ -6,7 +6,7 @@
 
 ## Простой проходкой по вопросам 
 
-Фаил make.py
+Фаил add.py
 
 ### Подключаем базовые модули
 
@@ -26,7 +26,7 @@ from tinydb import Query
 ### Иницилизируем базу  и возможность поиска и обьект 
 
 ```python
-dbtb = TinyDB('./db/tb.json')
+dbtb = TinyDB('./dbtb.json')
 Bl= Query()
 tb={}
 ```
@@ -38,32 +38,32 @@ tb={}
 #### Создаем функцию 
 
 ```python
-def ask(qu,key){
+def ask(qu,key):
     ans = input(qu) # вывод запроса с подсказкой
     tb[key]=ans # запись ответа в соответвующий ключ
-}
+
 ```
 
 ##### Задаем  вопросы + очищаем экран
 
 ```python
-ask("Имя пользователя","name")
+ask("Имя пользователя ","name")
 os.system('cls||clear')  
 
-ask("Тема","theme")
+ask("Тема ","theme")
 os.system('cls||clear') 
 
-ask("Хочу или надо","xn")
+ask("Хочу или надо ","xn")
 os.system('cls||clear')
 
-ask("Настроение на дело","mood")
+ask("Настроение на дело ","mood")
 os.system('cls||clear') 
 
-ask("Продолжительность в минутах","delta")
+ask("Продолжительность в минутах ","delta")
 os.system('cls||clear') 
 
 ask("Дата начала dd-mm-yy ","date")
-ask("Время начала hh:mm ","theme")
+ask("Время начала hh:mm ","time")
 os.system('cls||clear') 
 
 ```
